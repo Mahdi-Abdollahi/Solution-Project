@@ -1,0 +1,109 @@
+.logo--text {
+ 
+    text-transform: uppercase;
+    font-family: 'Lato-black';
+    font-size: 3.6rem;
+
+    background-image: linear-gradient(to right , $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+
+    background-clip: text;
+    color: transparent;
+
+    @media only screen and (max-width: 1550px) {
+        font-size: 3rem;
+    }
+}
+
+.heading-primary {
+    font-family: "Lato-light";
+    font-size: 7rem;
+    font-weight: 300;
+    max-width: 50rem;
+    color: $color-black;
+
+    &__bold {
+        font-weight: 700;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 4.6rem;
+    }
+    @media only screen and (max-width: 950px) {
+        font-size: 4.2rem;
+    }
+    @media only screen and (max-width: 830px) {
+        font-size: 4rem;
+    }
+    @media only screen and (max-width: 500px) {
+        font-size: 3.5rem;
+    }
+    @media only screen and (max-width: 380px) {
+        font-size: 3.2rem;
+    }
+}
+
+.heading-secondary {
+    font-family: "Lato-regular";
+    font-size: 3.3rem;
+    font-weight: 300;
+    color: $color-black;
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 3rem;
+    }
+    @media only screen and (max-width: 950px) {
+        font-size: 3.3rem;
+    }
+    @media only screen and (max-width: 500px) {
+        font-size: 2.9rem;
+    }
+    @media only screen and (max-width: 380px) {
+        font-size: 2.5rem;
+    }
+}
+
+.heading-tertiary {
+    font-family: "Lato-semibold";
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: $color-black;
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 2rem;
+    }
+    @media only screen and (max-width: 888px) {
+        font-size: 2.2rem;
+    }
+    @media only screen and (max-width: 650px) {
+        font-size: 2rem;
+    }
+    @media only screen and (max-width: 380px) {
+        font-size: 1.9rem;
+    }
+}
+
+.paragraph {
+    font-family: "OpenSans-Regular";
+    font-size: 1.8rem;
+    font-weight: inherit;
+    color: $color-text-grey;
+    margin: 2rem 0;
+    // max-width: 80%;
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 1.6rem;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 450px) {
+        font-size: 1.4rem;
+    }
+    @media only screen and (max-width: 380px) {
+        font-size: 1.3rem;
+    }
+}
+   
+
+   

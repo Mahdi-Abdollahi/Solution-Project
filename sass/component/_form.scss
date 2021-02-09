@@ -1,0 +1,86 @@
+.form {
+    grid-area: form;
+    // height: 100%;
+    margin-bottom: 11rem;
+
+    @media only screen and (max-width: 1020px) {
+        margin-bottom: 0;
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+    }
+    
+    &__input {
+        display: block;
+        width: 80%;
+        border: none;
+        padding: 2rem 2.5rem;
+        border-radius: 50px;
+        transition: all .2s ease-in-out;
+        margin-top: 3rem;
+
+        box-shadow: 0 10px 10px rgba($color-black, .2);
+
+        @media only screen and (max-width: 1020px) {
+            width: 100%;
+        }
+
+        &[type="text"] {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #666666;
+        }
+
+        &:focus {
+            outline: none;
+            width: 90%;
+            box-shadow: 0 12px 5px rgba($color-black, .2);
+
+            @media only screen and (max-width: 1020px) {
+                width: 105%;
+            }
+        }
+        
+        &::placeholder {
+            font: 300 1.7rem Arial;
+        }
+
+        
+    }
+
+    &__input--message {
+        height: 50%;
+        resize: none;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-align: start;
+        appearance: textfield;
+        cursor: text;
+        font: 100 2rem Arial;
+        padding: 3rem 2.5rem;
+        color: #666666;
+        transition: all .2s ease-in-out;
+        
+        &::placeholder {
+            font: 100 2rem Arial;
+        }
+
+        &:focus {
+            width: 80%;
+            box-shadow: 0 12px 5px rgba($color-black, .2);
+            transform: translateY(-2px);
+
+            @media only screen and (max-width: 1020px) {
+                width: 100%;
+                transform: none;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 3.5rem;
+    }
+}

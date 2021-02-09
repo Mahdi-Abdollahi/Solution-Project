@@ -1,0 +1,18 @@
+.btn__icon {
+    margin-left: 1rem;
+    box-sizing: initial;
+    height: 2rem;
+    width: 2rem;
+    background-color: $color-white;
+    padding: .3rem;
+    border-radius: 20px;
+    fill: $color-btn-2;
+}
+
+.social-svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #666666;
+
+    transition: all .1s ease-in-out;
+}

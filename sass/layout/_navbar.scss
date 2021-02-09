@@ -1,0 +1,202 @@
+.navbar {
+    padding: 4rem 20rem 2.5rem 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: block;
+    z-index: 10;
+    transform: all .2s ease-in;
+
+    @media only screen and (max-width: 1550px) {
+        padding: 4rem 10rem 2.5rem 10rem;
+    }
+    @media only screen and (max-width: 1250px) {
+        padding: 4rem 8rem 2.5rem 8rem;
+    }
+    @media only screen and (max-width: 950px) {
+        padding: 4rem 5rem 2.5rem 5rem;
+    }
+    @media only screen and (max-width: 400px) {
+        padding: 4rem 3.5rem 2.5rem 3.5rem;
+    }
+    
+    
+    &__logo {
+        margin-right: 5rem;
+
+        @media only screen and (max-width: 1550px) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: auto;
+
+        // SIDEBAR FOR SMALL SCREEN
+        @media only screen and (max-width: 820px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgb(63, 147, 181);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            width: 50%;
+            z-index: 100;
+            box-shadow: -10px 0 10px rgba($color-black , .2);
+            transform: translateX(120%);
+            transition: all .4s ease-in;
+        }
+        @media only screen and (max-width: 450px) {
+            width: 60%;
+        }
+        @media only screen and (max-width: 360px) {
+            width: 70%;
+        }
+        @media only screen and (max-width: 300px) {
+            width: 75%;
+        }
+        @media only screen and (max-width: 270px) {
+            width: 80%;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+      
+        cursor: pointer;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'OpenSans-Regular';
+            font-size: 1.7rem;
+            // font-weight: 300;
+            display: inline-block;
+            color: $color-text-grey;
+            padding: 0 .4rem;
+            transition: all .2s;
+            
+            @media only screen and (max-width: 1200px) {
+                font-size: 1.5rem;
+            }
+        
+        }
+      
+        &:hover {
+         color: $color-primary;
+         transform: translateY(-.3rem);
+         text-shadow: 0 1rem 3rem rgba($color-black , .4);
+        }
+        
+        &:focus {
+         transform: translateY(-.1rem);
+         text-shadow: 0 1rem 2rem rgba($color-black , .2);
+        }
+    }
+
+    &__menu-btns {
+        display: none;
+
+        @media only screen and (max-width: 820px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>a.btn__login {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    &__btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>a.btn__login {
+            margin-right: .5rem;
+        }
+
+        @media only screen and (max-width: 820px) {
+            display: none !important;
+        }
+    }
+
+    &__burger {
+        position: fixed;
+        right: 3rem;
+        cursor: pointer;
+        display: none;
+        pointer-events: all;
+        z-index: 1000;
+
+        &>div {
+            width: 25px;
+            height: 3px;
+            background-color: rgba(242, 166, 3, 0.994);
+            transition: all .2s ease-in;
+        }
+
+        &>div:not(:last-child) {
+            margin-bottom: 3px;
+        }
+
+        @media only screen and (max-width: 820px) {
+            display: block;
+        }
+    }
+
+    &__fixed {
+        position: fixed;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.905);
+        transform: all .2s ease-in;
+        padding: 2.5rem 20rem;
+        animation: moveDownNav .2s ease-in-out;
+        animation-fill-mode: backwards;
+
+        @media only screen and (max-width: 1550px) {
+            padding: 2.5rem 10rem;
+        }
+        @media only screen and (max-width: 1250px) {
+            padding: 2.5rem 8rem;
+        }
+        @media only screen and (max-width: 950px) {
+            padding: 2.5rem 5rem;
+        }
+        @media only screen and (max-width: 400px) {
+            padding: 2.5rem 3.5rem;
+        }
+    }
+}
+
+.toggle .layer-1 {
+    transform: rotate(-45deg) translateY(8px);
+}
+.toggle .layer-2 {
+    opacity: 0;
+}
+.toggle .layer-3 {
+    transform: rotate(45deg) translateY(-8px);
+}
+
+
+.navbar-active {
+    transform: translateX(0);
+}
+
+.navbar-close {
+    transform: translateX(100%);
+}

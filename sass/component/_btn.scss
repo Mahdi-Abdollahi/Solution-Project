@@ -1,0 +1,128 @@
+.btn {
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    border-radius: 100px;
+    color: rgba(253, 174, 28, 0.912) ;
+    border: 2px solid rgba(253, 175, 28, 0.912);
+    padding: .5rem 2rem;
+    display: inline-block;
+    
+    @media only screen and (max-width: 950px) {
+        font-size: 1.5rem;
+        padding: .4rem 1.8rem;
+    }
+
+    &__signup {
+        color: $color-white;
+        background-color: $color-secondary;
+        border: none;
+        padding: .7rem 2.2rem;
+
+        @media only screen and (max-width: 950px) {
+            padding: .7rem 2rem;
+        }
+    }
+
+}
+
+.btn__light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(to right , $color-btn-1 0%, $color-btn-2 100%);
+    color: $color-white;
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    border-radius: 100px;
+    border: none;
+    padding: .5rem 1.5rem;
+    transition: all .1s ease-in-out;
+    animation-fill-mode: both;
+    
+    &:hover {
+        outline: none;
+        transform: translateY(-.4rem);
+        box-shadow: 0 1rem 4rem rgba($color-black , .2);
+    }
+
+    &:active {
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 3rem rgba($color-black ,.2)
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-image: linear-gradient(to right , $color-secondary 0%, $color-primary 100%);
+        border-radius: 100px;
+        z-index: -1;
+        transition: all .4s ease-in-out;
+        border-radius: 100px !important;
+        animation-fill-mode: both;
+    }
+    
+    &:hover::after {
+        width: 100%;
+
+    }
+}
+
+
+// &__light {
+//     &:link,
+//     &:visited {
+//         color: $color-white;
+//         background-image: linear-gradient(to right , $color-btn-1 0%, $color-btn-2 100%);
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         outline: none;
+//         border: none;
+//         transition: all .4s ease-in-out;
+//     }
+  
+//     &:hover{
+//         transform: translateY(-.4rem);
+//         box-shadow: 0 1rem 4rem rgba($color-black , .2);
+//     }
+  
+//     &:active {
+//         transform: translateY(-.2rem);
+//         box-shadow: 0 1rem 3rem rgba($color-black , .1);
+//     }
+  
+    // &::after {
+    //     content: '';
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 0%;
+    //     height: 100%;
+    //     background-image: linear-gradient(to right , $color-secondary 0%, $color-primary 100%);
+    //     border-radius: 100px;
+    //     z-index: -1;
+    //     transition: all .2s ease-in-out;
+    // }
+    
+    // &:hover::after {
+    //     width: 100%;
+
+    // }
+  
+//    }
